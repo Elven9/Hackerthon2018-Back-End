@@ -9,7 +9,7 @@ module.exports = appInfo => {
    */
   config.cors = {
     origin: '*',
-    allowHeaders: 'api-kit-device-id,api-kit-hash,content-type,session-id',
+    allowHeaders: '*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE'
   }
 
