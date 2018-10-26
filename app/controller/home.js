@@ -9,7 +9,8 @@ class HomeController extends Controller {
   async getLocation() {
     this.ctx.body = {
       currentLocation: 'Taiwan',
-      time: '2018/08/12'
+      time: '2018/08/12',
+      createAt: 'test.'
     }
   }
 }
