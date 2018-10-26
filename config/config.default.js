@@ -3,11 +3,24 @@
 module.exports = appInfo => {
   const config = exports = {};
 
-  // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1540137642708_4586';
+  /**
+   * CORS 插件設定
+   * - egg-cors
+   */
+  config.cors = {
+    origin: '*',
+    allowHeaders: 'api-kit-device-id,api-kit-hash,content-type,session-id',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE'
+  }
 
-  // add your config here
-  config.middleware = [];
+  /**
+   * CSRF 攻擊防護設定
+   */
+  config.security = {
+    csrf: {
+      ignore: ctx => true
+    }
+  }
 
   return config;
 };
