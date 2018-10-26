@@ -8,7 +8,7 @@ module.exports = appInfo => {
    * - egg-cors
    */
   config.cors = {
-    origin: '*',
+    origin: 'http://localhost:8080',
     allowHeaders: '*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE'
   }
