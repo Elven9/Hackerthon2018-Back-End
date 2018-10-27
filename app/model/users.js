@@ -24,6 +24,10 @@ module.exports = (app) => {
       },
       nick_name: {
         type: Sequelize.STRING(45)
+      },
+      password: {
+        type: Sequelize.STRING(255),
+        allowNull: false
       }
     },
     {
