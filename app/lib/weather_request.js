@@ -15,6 +15,7 @@ const PATH = `https://opendata.cwb.gov.tw/api/`
 // Main Function
 const requestWeather = (path, method, condition) => {
   let options = UTIL._constructGetOption(condition);
+  console.log(`${PATH}${path}?${_AUTHORIZATION}${options}`);
   return _request(`${PATH}${path}?${_AUTHORIZATION}${options}`, method, {}, {
     headers: {
       'Accept': 'application/json'
