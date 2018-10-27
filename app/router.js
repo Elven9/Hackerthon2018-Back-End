@@ -11,7 +11,8 @@ module.exports = app => {
   // Add Axios to global.
   app.axios = axios;
 
-  router.get('/', controller.home.index);
+  // Search
+  router.get('/', controller.search.index);
 
   // Weather
   router.post('/weather', controller.weather.index);
