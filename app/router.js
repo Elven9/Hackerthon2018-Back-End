@@ -14,5 +14,6 @@ module.exports = app => {
   router.get('/', controller.home.index);
 
   // Weather
-  router.post('/weather/', controller.weather.index);
+  router.post('/weather', controller.weather.index);
+  
 };
