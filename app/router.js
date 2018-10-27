@@ -15,5 +15,6 @@ module.exports = app => {
   router.get('/', controller.search.index);
 
   // Weather
-  router.post('/weather/', controller.weather.index);
+  router.post('/weather', controller.weather.index);
+  
 };
