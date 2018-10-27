@@ -15,7 +15,11 @@ module.exports = app => {
   router.post('/search/findNearBy', controller.search.findNearBy);
   router.post('/search/findPlaces', controller.search.findPlaces);
   router.post('/search/usualTime', controller.search.usualTime);
+
   // Weather
   router.post('/weather', controller.weather.index);
+
+  // User
+  router.post('/user/login', controller.user.login);
   
 };

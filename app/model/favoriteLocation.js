@@ -1,7 +1,8 @@
 module.exports = (app) => {
   const { Sequelize } = app;
+  const model = app.model;
 
-  const FavoriteLocation = sequelize.define('favorite_location',
+  const FavoriteLocation = model.define('favorite_location',
     {
       id: {
         primaryKey: true,
@@ -41,7 +42,7 @@ module.exports = (app) => {
   FavoriteLocation.sync({ force: false });
 
   FavoriteLocation.associate = () => {
-    const { Users, FavoriteGroup } = app.model;
+    const { Users, FavoriteGroup } = model;
 
     FavoriteLocation.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
     FavoriteLocation.belongsTo(FavoriteGroup, {as: 'group', foreignKey: 'favorite_group_id', source: 'favorite_group_id'});

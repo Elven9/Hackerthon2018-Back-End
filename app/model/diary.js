@@ -1,7 +1,8 @@
 module.exports = (app) => {
   const { Sequelize } = app;
+  const model = app.model;
 
-  const Diary = sequelize.define('diary',
+  const Diary = model.define('diary',
     {
       id: {
         primaryKey: true,
@@ -28,7 +29,7 @@ module.exports = (app) => {
   Diary.sync({ force: false });
 
   Diary.associate = () => {
-    const { Users } = app.model;
+    const { Users } = model;
 
     Diary.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
   }

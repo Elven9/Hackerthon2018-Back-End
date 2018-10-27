@@ -1,7 +1,8 @@
 module.exports = (app) => {
   const { Sequelize } = app;
+  const model = app.model;
 
-  const FootprintRecord = sequelize.define('footprint_record',
+  const FootprintRecord = model.define('footprint_record',
     {
       id: {
         primaryKey: true,
@@ -37,7 +38,7 @@ module.exports = (app) => {
   FootprintRecord.sync({ force: false });
 
   FootprintRecord.associate = () => {
-    const { Users, Schedule } = app.model;
+    const { Users, Schedule } = model;
 
     FootprintRecord.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
     FootprintRecord.belongsTo(Schedule, {as: 'schedule', foreignKey: 'schedule_id', source: 'schedule_id'});

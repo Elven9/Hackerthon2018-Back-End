@@ -1,7 +1,8 @@
 module.exports = (app) => {
   const { Sequelize } = app;
+  const model = app.model;
 
-  const Schedule = sequelize.define('schedule',
+  const Schedule = model.define('schedule',
     {
       id: {
         primaryKey: true,
@@ -25,7 +26,7 @@ module.exports = (app) => {
   Schedule.sync({ force: false });
 
   Schedule.associate = () => {
-    const { Users } = app.model;
+    const { Users } = model;
 
     Schedule.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
   }
