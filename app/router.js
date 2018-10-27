@@ -15,9 +15,11 @@ module.exports = app => {
   router.post('/search/findNearBy', controller.search.findNearBy);
   router.post('/search/findPlaces', controller.search.findPlaces);
   router.post('/search/usualTime', controller.search.usualTime);
+
   // Weather
   router.post('/weather', controller.weather.index);
 
-  router.get('.well-known/acme-challenge/tn2B20Z7SsEwFtRbq5DBz-IeDWucrAgGvDTusFtgwMk', controller.weather.test);
+  // User
+  router.post('/user/login', controller.user.login);
   
 };
