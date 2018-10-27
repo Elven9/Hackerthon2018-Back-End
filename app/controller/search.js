@@ -6,60 +6,7 @@ const googlePlaceSearchRequest = require('../lib/google_place_request.js');
 const Controller = require('egg').Controller;
 
 class SearchController extends Controller {
-  /*async findAddress() {
-    const { ctx, app, logger } = this;
-    const { request, response } = ctx;
-    const { body } = request;
-    
-    body.query = encodeURI(body.query);
-    body.region = 'tw';
-    body.location = `${body.location.latitude},${body.location.longitude}`;
-    const result = await googlePlaceSearchRequest("textsearch", body);
-    
-    async function placeidToDetail(placeId){
-      const detail = await googlePlaceSearchRequest("details",{ placeid: placeId});
-      return detail;
-    }
-
-    const allResult = [];
-    const limit = (result.data.results.length < 5)?result.data.results.length:5;
-
-    for(var i = 0; i <limit; i++){
-      const singleResult = await placeidToDetail(result.data.results[i].place_id);
-      allResult.push(singleResult.data);
-    }
-    
-    response.body = allResult;
-  }
-
-  async findSingleAddress(){
-    const { ctx, app, logger } = this;
-    const { request, response } = ctx;
-    const { body } = request;
-
-
-    const result = await googlePlaceSearchRequest("details", body);
-    const lat = result.data.result.geometry.location.lat;
-    const lng = result.data.result.geometry.location.lng;
-    const ans = { data:result.data, lat, lng };
-
-    response.body = ans;
-  }
   
-  async findNearBy(){
-    const { ctx, app, logger } = this;
-    const { request, response } = ctx;
-    const { body } = request;
-    
-    body.location = `${body.location.latitude},${body.location.longitude}`;
-    const result = await googlePlaceSearchRequest("nearbysearch", body);
-    const allResult = [];
-    const limit = result.data.results.length;
-    for(var i = 0 ; i<limit; i++){
-      allResult.push(result.data.results[i]);
-    }
-    response.body = allResult;
-  }*/
   async usualTime(){
     const { ctx, app, logger } = this;
     const { request, response } = ctx;
