@@ -18,6 +18,6 @@ module.exports = app => {
   // Weather
   router.post('/weather', controller.weather.index);
 
-  router.get('.well-known/acme-challenge/yM16Ulrhgj64zHQiGjhfutRD6NFDsf6rZHXp1PoKZ2U', controller.weather.test);
+  router.get('.well-known/acme-challenge/tn2B20Z7SsEwFtRbq5DBz-IeDWucrAgGvDTusFtgwMk', controller.weather.test);
   
 };

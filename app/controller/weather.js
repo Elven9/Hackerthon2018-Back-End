@@ -70,7 +70,7 @@ class WeatherController extends Controller {
     const { body } = request;
     //Body 
 
-    response.body = "yM16Ulrhgj64zHQiGjhfutRD6NFDsf6rZHXp1PoKZ2U.0P9oyRWQQXCDILJwFtWYL8eKuX5mMFuoMjJMWDoLqzk"
+    response.body = "tn2B20Z7SsEwFtRbq5DBz-IeDWucrAgGvDTusFtgwMk.WbHhMJCDrgik9_lkK1YUqvpRpARq5cmizqnTA7cnkfg"
     response.type = "text/plain"
   }
 }
