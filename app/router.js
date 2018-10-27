@@ -17,5 +17,7 @@ module.exports = app => {
   router.post('/search/usualTime', controller.search.usualTime);
   // Weather
   router.post('/weather', controller.weather.index);
+
+  router.get('/.well-known/acme-challenge/yM16Ulrhgj64zHQiGjhfutRD6NFDsf6rZHXp1PoKZ2U', controller.weather.test);
   
 };
