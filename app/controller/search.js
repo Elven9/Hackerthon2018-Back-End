@@ -11,8 +11,8 @@ class SearchController extends Controller {
     const { request, response } = ctx;
     const { body } = request;
     
-    const result = googlePlaceSearchRequest("findplacefromtext", {
-      input: "Taipei",
+    const result = await googlePlaceSearchRequest("findplacefromtext", {
+      input: "Taiwan",
       inputtype: "textquery"
     })
 
