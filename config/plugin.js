@@ -8,7 +8,7 @@ exports.cors = {
   package: 'egg-cors',
 };
 
-exports.sequelize = {
-  enable: true,
-  package: 'egg-sequelize'
-}
+// exports.sequelize = {
+//   enable: true,
+//   package: 'egg-sequelize'
+// }

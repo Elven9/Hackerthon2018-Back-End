@@ -28,19 +28,19 @@ module.exports = appInfo => {
     }
   }
 
-  exports.sequelize = {
-    dialect: 'mysql', // support: mysql, mariadb, postgres, mssql
-    database: 'hackerthon',
-    host: 'hackerthon.mysql.database.azure.com',
-    port: '3306',
-    username: 'elvenlin@hackerthon',
-    password: 'h9FcDwNjGnWtncw',
-    baseDir: 'model'
-    // delegate: 'myModel', // load all models to `app[delegate]` and `ctx[delegate]`, default to `model`
-    // baseDir: 'my_model', // load all files in `app/${baseDir}` as models, default to `model`
-    // exclude: 'index.js', // ignore `app/${baseDir}/index.js` when load models, support glob and array
-    // more sequelize options
-  };
+  // exports.sequelize = {
+  //   dialect: 'mysql', // support: mysql, mariadb, postgres, mssql
+  //   database: 'hackerthon',
+  //   host: 'hackerthon.mysql.database.azure.com',
+  //   port: '3306',
+  //   username: 'elvenlin@hackerthon',
+  //   password: 'h9FcDwNjGnWtncw',
+  //   baseDir: 'model'
+  //   // delegate: 'myModel', // load all models to `app[delegate]` and `ctx[delegate]`, default to `model`
+  //   // baseDir: 'my_model', // load all files in `app/${baseDir}` as models, default to `model`
+  //   // exclude: 'index.js', // ignore `app/${baseDir}/index.js` when load models, support glob and array
+  //   // more sequelize options
+  // };
 
   return config;
 };
