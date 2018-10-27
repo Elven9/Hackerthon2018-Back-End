@@ -25,7 +25,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --port=7001 --daemon --title=egg-server-Hackerthon2018-Back-End",
+    "start": "egg-scripts start --port=80 --daemon --title=egg-server-Hackerthon2018-Back-End",
     "stop": "egg-scripts stop --title=egg-server-Hackerthon2018-Back-End",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
