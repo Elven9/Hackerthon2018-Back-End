@@ -28,7 +28,9 @@ module.exports = (app) => {
   FavoriteGroup.sync({ force: false });
 
   FavoriteGroup.associate = () => {
-    
+    const { Users } = app.model;
+
+    FavoriteGroup.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
   }
 
   return FavoriteGroup;

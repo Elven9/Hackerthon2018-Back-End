@@ -41,7 +41,10 @@ module.exports = (app) => {
   FavoriteLocation.sync({ force: false });
 
   FavoriteLocation.associate = () => {
-    
+    const { Users, FavoriteGroup } = app.model;
+
+    FavoriteLocation.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
+    FavoriteLocation.belongsTo(FavoriteGroup, {as: 'group', foreignKey: 'favorite_group_id', source: 'favorite_group_id'});
   }
 
   return FavoriteLocation;

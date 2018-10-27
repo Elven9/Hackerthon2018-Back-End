@@ -25,7 +25,9 @@ module.exports = (app) => {
   Schedule.sync({ force: false });
 
   Schedule.associate = () => {
-    
+    const { Users } = app.model;
+
+    Schedule.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
   }
 
   return Schedule;

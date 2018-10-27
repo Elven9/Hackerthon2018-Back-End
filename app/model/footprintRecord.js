@@ -37,7 +37,10 @@ module.exports = (app) => {
   FootprintRecord.sync({ force: false });
 
   FootprintRecord.associate = () => {
-    
+    const { Users, Schedule } = app.model;
+
+    FootprintRecord.belongsTo(Users, {as: 'user', foreignKey: 'user_id', source: 'user_id'});
+    FootprintRecord.belongsTo(Schedule, {as: 'schedule', foreignKey: 'schedule_id', source: 'schedule_id'});
   }
 
   return FootprintRecord;

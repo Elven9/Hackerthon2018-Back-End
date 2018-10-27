@@ -37,7 +37,13 @@ module.exports = (app) => {
   Users.sync({ force: false });
 
   Users.associate = () => {
-    
+    const { Diary, FavoriteGroup, FavoriteLocation, Schedule, FootprintRecord } = app.model;
+
+    Users.hasOne(Diary, {as: 'diary', foreignKey: 'user_id'});
+    Users.hasOne(FavoriteGroup, {as: 'group', foreignKey: 'user_id'});
+    Users.hasOne(FavoriteLocation, {as: 'location', foreignKey: 'user_id'});
+    Users.hasOne(Schedule, {as: 'schedule', foreignKey: 'user_id'});
+    Users.hasOne(FootprintRecord, {as: 'footpring', foreignKey: 'user_id'});
   }
 
   return Users;
