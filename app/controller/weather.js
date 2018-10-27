@@ -63,16 +63,6 @@ class WeatherController extends Controller {
     // Code
     response.body = gave;
   }
-
-  async test() {
-    const { ctx, app, logger } = this;
-    const { request, response } = ctx;
-    const { body } = request;
-    //Body 
-
-    response.body = "tn2B20Z7SsEwFtRbq5DBz-IeDWucrAgGvDTusFtgwMk.WbHhMJCDrgik9_lkK1YUqvpRpARq5cmizqnTA7cnkfg"
-    response.type = "text/plain"
-  }
 }
 
 module.exports = WeatherController;
