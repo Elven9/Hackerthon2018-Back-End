@@ -9,5 +9,24 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
+  /**
+   * CORS 插件設定
+   * - egg-cors
+   */
+  config.cors = {
+    origin: 'http://localhost:8080',
+    allowHeaders: 'content-type',
+    allowMethods: 'GET,POST'
+  }
+
+  /**
+   * CSRF 攻擊防護設定
+   */
+  config.security = {
+    csrf: {
+      ignore: ctx => true
+    }
+  }
+
   return config;
 };
