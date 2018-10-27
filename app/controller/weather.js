@@ -61,7 +61,7 @@ class WeatherController extends Controller {
     gave.minT = result.data.records.location[0].weatherElement[2].time[0].parameter.parameterName;
     gave.maxT = result.data.records.location[0].weatherElement[4].time[0].parameter.parameterName;
     // Code
-    response.body = { result : gave, raw : result.data};
+    response.body = gave;
   }
 }
 
