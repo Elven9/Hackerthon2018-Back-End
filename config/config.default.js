@@ -19,5 +19,14 @@ module.exports = appInfo => {
     allowMethods: 'GET,POST'
   }
 
+  /**
+   * CSRF 攻擊防護設定
+   */
+  config.security = {
+    csrf: {
+      ignore: ctx => true
+    }
+  }
+
   return config;
 };
